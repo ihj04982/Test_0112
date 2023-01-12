@@ -20,6 +20,12 @@
         "Client": {
           "$path": "src/client"
         }
+      }, 
+
+      "StarterCharacterScripts": {
+        "Client": {
+          "$path": "src/character"
+        }
       }
     },
 
@@ -69,4 +75,4 @@
       }
     }
   }
-}
+} 
