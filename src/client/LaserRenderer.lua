@@ -10,10 +10,12 @@ function LaserRenderer.createLaser(startPos, endPos)
     laserPart.Material = Enum.Material.Neon
     laserPart.Parent = workspace
 
-    local laserDistance = (endPos - startPos).Magnitude
+    local laserDistance = (startPos - endPos).Magnitude
     laserPart.Size = Vector3.new(0.2, 0.2, laserDistance)
     local laserCFrameTemp = CFrame.lookAt(startPos, endPos)
     laserPart.CFrame = laserCFrameTemp * CFrame.new(0,0,-laserDistance*0.5)
+    
+    game.Debris:AddItem(laserPart, SHOT_DURATION)
 end
 
 return LaserRenderer
