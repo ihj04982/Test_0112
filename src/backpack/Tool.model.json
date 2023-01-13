@@ -1,0 +1,31 @@
+{
+    "ClassName": "Tool",
+    "properties": {
+      "Grip": [0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
+      "TextureId": "rbxassetid://130093050"
+    },
+    "Children": [
+      {
+        "Name": "Handle",
+        "ClassName": "MeshPart",
+        "properties":{
+
+        },
+        "Children": [
+          {"Name": "Equipped",
+          "ClassName": "Sound",
+          "properties":{
+          "SoundId": "rbxassetid://282906960"
+          }
+        },
+        {
+          "Name": "Activated",
+          "ClassName": "Sound",
+          "properties":{
+          "SoundId": "rbxassetid://130113322"
+          }
+        }
+      ]
+      }
+    ]
+  }
