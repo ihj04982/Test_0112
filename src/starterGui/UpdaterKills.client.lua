@@ -2,7 +2,7 @@ local Players = game : GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local killPlayer = ReplicatedStorage:WaitForChild("KillPlayer")
 
---local textLabel = script.Parent:WaitForChild("TextLabel")
+-- local textLabel = script.Parent:FindFirstChild("TextLabel")
 local textLabel = script.Parent
 
 killPlayer.OnClientEvent:Connect(function()
