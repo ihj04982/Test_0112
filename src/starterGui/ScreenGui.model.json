@@ -1,0 +1,63 @@
+{
+    "ClassName": "ScreenGui",
+    "Children": [
+        {
+          "Name": "Frame",
+          "ClassName": "Frame",
+          "properties":{
+            "AnchorPoint" : [0.5, 0],
+            "BackgroundColor3" : [0, 0, 0],
+            "BackgroundTransparency": 0.6,
+            "Position": {
+                "UDim2": [[0.5,0], [0,0]]
+                }
+          },
+          "Children": [
+            {
+                "Name": "UISizeConstraint",
+                "ClassName": "UISizeConstraint",
+                "properties":{
+                    "MinSize" : [150, 50]
+                }
+            },
+            {
+                "Name": "UIListLayout",
+                "ClassName": "UIListLayout",
+                "properties":{
+                    "FillDirection": "Horizontal",
+                    "HorizontalAlignment": "Center",
+                    "VerticalAlignment": "Center"
+                }
+            },
+            {
+                "Name": "ImageLabel",
+                "ClassName": "ImageLabel",
+                "properties":{
+                    "Image": "rbxassetid://7019187113",
+                    "Size":{
+                        "UDim2": [[0.5,0], [0.8,0]]
+                        },
+                "BackgroundTransparency": 1,
+                "LayoutOrder": 1,
+                "ScaleType": "Fit"       
+                }
+            },
+            {
+                "Name": "TextLabel",
+                "ClassName": "TextLabel",
+                "properties":{
+                    "Size":{
+                        "UDim2": [[0.5,0], [0.9,0]]
+                        },
+                "BackgroundTransparency": 1,
+                "LayoutOrder": 2,
+                "Font": "GothamBold",
+                "Text": "0",
+                "TextColor3": [255, 191, 0],
+                "TextSize": 40       
+                }
+            }
+        ]
+    }
+    ]
+}   

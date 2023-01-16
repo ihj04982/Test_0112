@@ -45,7 +45,8 @@ function damagePlayer(playerFired, characterToDamage, hitPosition)
         humanoid.Health -= LASER_DAMAGE
         if humanoid.Health <= 0 then
             --플레이어가 죽으면 killEvent 발생
-            ServerStorage.KillEvent:Fire(playerFired)
+            -- ServerStorage.KillEvent:Fire(playerFired)
+            ReplicatedStorage.KillPlayer:FireClient(playerFired)
         end
     else
         print("유효성 검증 실패")

@@ -31,6 +31,9 @@
         }
       }
     },
+    "StarterGui":{
+      "$path": "src/starterGui"
+    },
 
     "Workspace": {
       "$properties": {
