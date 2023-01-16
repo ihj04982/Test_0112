@@ -49,7 +49,7 @@ local function fireWeapon()
         hitPosition = gunLocation + targetDirection
     end
     timeOfPreviousShot = tick()
-    LaserRenderer.createLaser(tool.Handle.Position, hitPosition)
+    LaserRenderer.createLaser(gunLocation, hitPosition)
     ReplicatedStorage.FiredLaser:FireServer(hitPosition)
 end 
 

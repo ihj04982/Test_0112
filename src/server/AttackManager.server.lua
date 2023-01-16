@@ -1,5 +1,6 @@
 local ReplicatedStorage = game: GetService("ReplicatedStorage")
-local LASER_DAMAGE = 10
+local ServerStorage = game: GetService("ServerStorage")
+local LASER_DAMAGE = 50
 local MAX_HIT_PROXIMITY = 9
 local MAX_LASER_DISTANCE = 512
 
@@ -24,30 +25,28 @@ end
 
 local function isHitValid(playerFired, characterToDamage, hitPosition)
     local humanoid = characterToDamage:FindFirstChild("Humanoid")
-    print("00")
     if humanoid then
         local characterHitProximity = (humanoid.RootPart.Position - hitPosition).Magnitude
         if characterHitProximity > MAX_HIT_PROXIMITY then
-            print("11")
             return false
         end
     end
     if isLayCastingValid(playerFired, characterToDamage, hitPosition) == false then
-        print("22")
         return false
     end
     return true
 end
 
 
-function damagePlayer(playerFired, characterToDamage)
-    print("aa")
+function damagePlayer(playerFired, characterToDamage, hitPosition)
     local humanoid = characterToDamage:FindFirstChild("Humanoid")
     local isValid = isHitValid(playerFired, characterToDamage, hitPosition)
     if humanoid and isValid then
-        print("bb")
         humanoid.Health -= LASER_DAMAGE
-
+        if humanoid.Health <= 0 then
+            --플레이어가 죽으면 killEvent 발생
+            ServerStorage.KillEvent:Fire(playerFired)
+        end
     else
         print("유효성 검증 실패")
     end
